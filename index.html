@@ -4,112 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exército Brasileiro - Milsim Roblox</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- BARRA GOVERNO -->
     <div id="barra-brasil">
-        <div class="container-gov">
+        <div class="container-flex">
             <a href="#">Brasil</a>
-            <span id="relogio-eb">00:00:00R</span>
+            <span id="relogio-eb">CARREGANDO HORÁRIO MILITAR...</span>
         </div>
-        <nav>
-            <a href="#">Acesso à informação</a>
-            <a href="#">Canais</a>
-        </nav>
     </div>
 
+    <!-- HEADER PRINCIPAL -->
     <header>
         <div class="header-container">
-            <div class="logo-area">
-                <img src="logo.png" alt="Exército Brasileiro" class="main-logo">
-                <div class="textos-logo">
-                    <span class="ministerio">Ministério da Defesa</span>
-                    <span class="eb-nome">Exército Brasileiro</span>
-                    <span class="milsim-tag">Comando de Operações Milsim - Roblox</span>
-                </div>
+            <img src="logo.png" alt="Logo EB" class="main-logo">
+            <div class="textos-logo">
+                <span class="ministerio">Ministério da Defesa</span>
+                <span class="eb-nome">Exército Brasileiro</span>
+                <span class="milsim-tag">Comando de Operações Milsim - Roblox</span>
             </div>
         </div>
     </header>
 
+    <!-- MENU DE NAVEGAÇÃO -->
     <nav class="menu-horizontal">
         <ul>
             <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">O que é Milsim?</a></li>
+            <li><a href="#instituicao">A Instituição</a></li>
+            <li><a href="#cursos">Cursos e Especializações</a></li>
             <li><a href="#regulamento">Regulamento</a></li>
-            <li><a href="#galeria">Operações</a></li>
-            <li><a href="https://discord.gg/VKuXn8t52" target="_blank" class="destaque-menu">Alistamento</a></li>
+            <li><a href="https://discord.gg/VKuXn8t52" target="_blank" class="btn-destaque">Alistamento</a></li>
         </ul>
     </nav>
 
     <main>
-        <!-- Banner Principal Gigante -->
-        <section id="inicio" class="destaque-principal">
-            <div class="banner-overlay">
+        <!-- SEÇÃO 1: BANNER DE IMPACTO -->
+        <section id="inicio" class="hero-banner">
+            <div class="overlay">
                 <h1>Braço Forte, Mão Amiga</h1>
-                <p>Simulação Militar de Alto Nível. Disciplina, Hierarquia e Honra.</p>
-                <a href="https://discord.gg/VKuXn8t52" target="_blank" class="btn-alistamento" onclick="verificarAlistamento(event)">Aliste-se no Discord Oficial</a>
+                <p>A maior e mais fiel simulação militar do Roblox. Disciplina, Honra e Lealdade acima de tudo.</p>
+                <div class="botoes-hero">
+                    <a href="#instituicao" class="btn-secundario">Conheça nossa História</a>
+                    <a href="https://discord.gg/VKuXn8t52" class="btn-primario">Aliste-se Agora</a>
+                </div>
             </div>
         </section>
 
-        <!-- O que é Milsim -->
-        <section id="sobre" class="secao-informativa">
+        <!-- SEÇÃO 2: A INSTITUIÇÃO -->
+        <section id="instituicao" class="secao-branca">
             <div class="container">
-                <h2>O que é o Milsim?</h2>
-                <div class="texto-longo">
-                    <p>O <strong>Milsim (Military Simulation)</strong> no Roblox é muito mais do que um jogo de combate. É uma experiência imersiva onde reproduzimos fielmente os protocolos, a etiqueta e os treinamentos do Exército Brasileiro real.</p>
-                    <p>Nossa unidade foca no realismo tático, utilizando patentes, códigos de rádio e estratégias de campo para criar um ambiente de simulação sério e organizado para todos os entusiastas da vida militar.</p>
+                <span class="subtitulo">Nossa Missão</span>
+                <h2>O Exército Brasileiro no Milsim</h2>
+                <div class="grid-texto">
+                    <p>O Exército Brasileiro é a força terrestre das Forças Armadas. No nosso Milsim, reproduzimos a estrutura organizacional que garante a soberania nacional e a ordem. Focamos na formação de cidadãos-soldados preparados para operações táticas, patrulhamento e auxílio à comunidade virtual.</p>
+                    <p>Nossa hierarquia é baseada no mérito. Cada soldado trilha um caminho desde a Escola de Recrutas até o oficialato, passando por provas rigorosas de conduta e habilidade técnica.</p>
                 </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: CURSOS (EXPANDIDA) -->
+        <section id="cursos" class="secao-cinza">
+            <div class="container">
+                <h2>Cursos e Especializações</h2>
+                <p>O EB possui mais de 300 cursos. No nosso Milsim, dividimos as especializações em centros de instrução:</p>
                 
-                <div class="cards-grid">
-                    <div class="card">
-                        <h3>Hierarquia</h3>
-                        <p>Respeito absoluto à Cadeia de Comando. De Recruta a General, cada cargo possui responsabilidades reais.</p>
+                <div class="grid-cursos">
+                    <div class="card-curso">
+                        <h3>Combatentes de Elite</h3>
+                        <ul>
+                            <li>CIGS (Guerra na Selva)</li>
+                            <li>Curso de Precursores Paraquedistas</li>
+                            <li>Comandos e Forças Especiais</li>
+                            <li>Caçador (Sniper) Militar</li>
+                        </ul>
                     </div>
-                    <div class="card">
-                        <h3>Instruções</h3>
-                        <p>Treinamentos semanais de tiro, formação, patrulha e operações especiais em mapas detalhados.</p>
+                    <div class="card-curso">
+                        <h3>Armas e Quadros</h3>
+                        <ul>
+                            <li>Infantaria Amestrada</li>
+                            <li>Cavalaria Mecanizada</li>
+                            <li>Artilharia de Campanha</li>
+                            <li>Engenharia de Combate</li>
+                        </ul>
                     </div>
-                    <div class="card">
-                        <h3>Carreira</h3>
-                        <p>Siga uma carreira militar virtual, conquiste medalhas, cursos e suba na hierarquia por mérito.</p>
+                    <div class="card-curso">
+                        <h3>Suporte e Logística</h3>
+                        <ul>
+                            <li>Curso de Intendência</li>
+                            <li>Comunicações e Guerra Eletrônica</li>
+                            <li>Saúde Operacional (Médicos de Campo)</li>
+                            <li>Polícia do Exército (PE)</li>
+                        </ul>
                     </div>
                 </div>
+                <p class="nota-cursos">*Todos os cursos exigem a patente mínima de Cabo para inscrição.</p>
             </div>
         </section>
 
-        <!-- Regulamento -->
-        <section id="regulamento" class="secao-informativa bg-verde">
+        <!-- SEÇÃO 4: REGULAMENTO -->
+        <section id="regulamento" class="secao-verde">
             <div class="container">
-                <h2 class="texto-branco">Regulamento de Campanha</h2>
-                <div class="regimento-box">
-                    <ul>
-                        <li><strong>Dever Militar:</strong> Lealdade à instituição e obediência às ordens superiores.</li>
-                        <li><strong>Uniforme:</strong> Uso obrigatório da farda correta em todos os eventos oficiais.</li>
-                        <li><strong>Conduta:</strong> Proibido comportamento tóxico, anti-jogo ou desrespeito em áreas de serviço.</li>
-                        <li><strong>Inatividade:</strong> Membros inativos sem aviso prévio estarão sujeitos ao desligamento.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Galeria de Imagens para aumentar o site -->
-        <section id="galeria" class="secao-informativa">
-            <div class="container">
-                <h2>Galeria de Operações</h2>
-                <div class="grid-galeria">
-                    <img src="banner1.jpg" alt="Treinamento 1" onerror="this.style.display='none'">
-                    <img src="banner2.jpg" alt="Operação 2" onerror="this.style.display='none'">
-                    <img src="banner3.jpg" alt="Formatura 3" onerror="this.style.display='none'">
+                <h2 class="texto-branco">Regulamento Interno (R-1)</h2>
+                <div class="box-regulamento">
+                    <p><strong>Art. 1º:</strong> A hierarquia e a disciplina são a base do Exército. O desrespeito a superiores é falta grave.</p>
+                    <p><strong>Art. 2º:</strong> O uniforme é a identidade do soldado. Use-o com brio e de acordo com as normas da sua unidade.</p>
+                    <p><strong>Art. 3º:</strong> É terminantemente proibido o uso de armas fora de áreas de treinamento ou combate autorizado.</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <img src="logo.png" alt="Logo EB" class="footer-logo">
-            <p>&copy; 2026 Comando Milsim Roblox - Exército Brasileiro Virtual.<br>Este site é para fins recreativos e não possui vínculo oficial com o Exército Brasileiro real.</p>
+        <div class="container">
+            <p>&copy; 2026 Exército Brasileiro Milsim - Desenvolvido para Simulação no Roblox.</p>
         </div>
     </footer>
 
