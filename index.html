@@ -2,13 +2,17 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exército Brasileiro - Milsim Roblox</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
     <div id="barra-brasil">
-        <a href="#">Brasil</a>
+        <div class="container-gov">
+            <a href="#">Brasil</a>
+            <span id="relogio-eb">00:00:00R</span>
+        </div>
         <nav>
             <a href="#">Acesso à informação</a>
             <a href="#">Canais</a>
@@ -22,7 +26,7 @@
                 <div class="textos-logo">
                     <span class="ministerio">Ministério da Defesa</span>
                     <span class="eb-nome">Exército Brasileiro</span>
-                    <span class="milsim-tag">Comando de Operações Milsim</span>
+                    <span class="milsim-tag">Comando de Operações Milsim - Roblox</span>
                 </div>
             </div>
         </div>
@@ -33,60 +37,82 @@
             <li><a href="#inicio">Início</a></li>
             <li><a href="#sobre">O que é Milsim?</a></li>
             <li><a href="#regulamento">Regulamento</a></li>
-            <li><a href="https://discord.gg/VKuXn8t52" target="_blank">Alistamento</a></li>
+            <li><a href="#galeria">Operações</a></li>
+            <li><a href="https://discord.gg/VKuXn8t52" target="_blank" class="destaque-menu">Alistamento</a></li>
         </ul>
     </nav>
 
-    <!-- Seção Início (Banner) -->
-    <section id="inicio" class="destaque-principal">
-        <div class="banner-overlay">
-            <h1>Braço Forte, Mão Amiga</h1>
-            <p>Junte-se à simulação militar mais fiel do Roblox. Disciplina, honra e dever.</p>
-            <a href="https://discord.gg/VKuXn8t52" target="_blank" class="btn-alistamento">Aliste-se no Discord</a>
-        </div>
-    </section>
+    <main>
+        <!-- Banner Principal Gigante -->
+        <section id="inicio" class="destaque-principal">
+            <div class="banner-overlay">
+                <h1>Braço Forte, Mão Amiga</h1>
+                <p>Simulação Militar de Alto Nível. Disciplina, Hierarquia e Honra.</p>
+                <a href="https://discord.gg/VKuXn8t52" target="_blank" class="btn-alistamento" onclick="verificarAlistamento(event)">Aliste-se no Discord Oficial</a>
+            </div>
+        </section>
 
-    <!-- Seção Sobre o Milsim -->
-    <section id="sobre" class="secao-informativa">
-        <div class="container">
-            <h2>O que é o Milsim?</h2>
-            <p>O <strong>Milsim (Military Simulation)</strong> é focado em reproduzir a vida militar com o máximo de realismo possível dentro do Roblox. Não somos apenas um grupo de combate; somos uma instituição que preza pela etiqueta e técnica real.</p>
-            
-            <div class="cards-grid">
-                <div class="card">
-                    <h3>Hierarquia Rígida</h3>
-                    <p>Seguimos a estrutura de patentes do Exército Brasileiro. O respeito aos superiores é a base do nosso grupo.</p>
+        <!-- O que é Milsim -->
+        <section id="sobre" class="secao-informativa">
+            <div class="container">
+                <h2>O que é o Milsim?</h2>
+                <div class="texto-longo">
+                    <p>O <strong>Milsim (Military Simulation)</strong> no Roblox é muito mais do que um jogo de combate. É uma experiência imersiva onde reproduzimos fielmente os protocolos, a etiqueta e os treinamentos do Exército Brasileiro real.</p>
+                    <p>Nossa unidade foca no realismo tático, utilizando patentes, códigos de rádio e estratégias de campo para criar um ambiente de simulação sério e organizado para todos os entusiastas da vida militar.</p>
                 </div>
-                <div class="card">
-                    <h3>Treinamento Real</h3>
-                    <p>Nossas instruções incluem formações táticas, CQB, comunicações via rádio e patrulhamento de fronteira.</p>
-                </div>
-                <div class="card">
-                    <h3>Eventos e Missões</h3>
-                    <p>Participamos de simulações de combate, operações de paz e desfiles cerimoniais oficiais.</p>
+                
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Hierarquia</h3>
+                        <p>Respeito absoluto à Cadeia de Comando. De Recruta a General, cada cargo possui responsabilidades reais.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Instruções</h3>
+                        <p>Treinamentos semanais de tiro, formação, patrulha e operações especiais em mapas detalhados.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Carreira</h3>
+                        <p>Siga uma carreira militar virtual, conquiste medalhas, cursos e suba na hierarquia por mérito.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Seção Regulamento -->
-    <section id="regulamento" class="secao-informativa bg-verde">
-        <div class="container">
-            <h2 class="texto-branco">Regulamento de Campanha</h2>
-            <div class="regimento-box">
-                <ul>
-                    <li><strong>Conduta Moral:</strong> É proibido o uso de linguagem ofensiva ou comportamento tóxico.</li>
-                    <li><strong>Uso da Farda:</strong> O uniforme deve estar completo e de acordo com a sua graduação.</li>
-                    <li><strong>Comando:</strong> Ordens diretas de oficiais em serviço devem ser cumpridas sem questionamento imediato.</li>
-                    <li><strong>Engajamento:</strong> O uso de armas em áreas civis ou sem autorização resulta em corte marcial.</li>
-                </ul>
+        <!-- Regulamento -->
+        <section id="regulamento" class="secao-informativa bg-verde">
+            <div class="container">
+                <h2 class="texto-branco">Regulamento de Campanha</h2>
+                <div class="regimento-box">
+                    <ul>
+                        <li><strong>Dever Militar:</strong> Lealdade à instituição e obediência às ordens superiores.</li>
+                        <li><strong>Uniforme:</strong> Uso obrigatório da farda correta em todos os eventos oficiais.</li>
+                        <li><strong>Conduta:</strong> Proibido comportamento tóxico, anti-jogo ou desrespeito em áreas de serviço.</li>
+                        <li><strong>Inatividade:</strong> Membros inativos sem aviso prévio estarão sujeitos ao desligamento.</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Galeria de Imagens para aumentar o site -->
+        <section id="galeria" class="secao-informativa">
+            <div class="container">
+                <h2>Galeria de Operações</h2>
+                <div class="grid-galeria">
+                    <img src="banner1.jpg" alt="Treinamento 1" onerror="this.style.display='none'">
+                    <img src="banner2.jpg" alt="Operação 2" onerror="this.style.display='none'">
+                    <img src="banner3.jpg" alt="Formatura 3" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Exército Brasileiro Milsim - Roblox. Desenvolvido para fins de simulação.</p>
+        <div class="footer-content">
+            <img src="logo.png" alt="Logo EB" class="footer-logo">
+            <p>&copy; 2026 Comando Milsim Roblox - Exército Brasileiro Virtual.<br>Este site é para fins recreativos e não possui vínculo oficial com o Exército Brasileiro real.</p>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
